@@ -1,9 +1,8 @@
 name: CI Pipeline - CodeHealth
 
-# Gatilho: roda automaticamente quando há push na branch develop
 on:
   push:
-    branches: [develop]
+    branches: [develop, feature/teste-ci]
 
 jobs:
   build-and-test:
@@ -23,4 +22,3 @@ jobs:
 
     - name: Relatório final
       run: echo "✅ Build successful!"
-
