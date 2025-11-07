@@ -1,0 +1,26 @@
+name: CI Pipeline - CodeHealth
+
+# Gatilho: roda automaticamente quando há push na branch develop
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v3
+
+    - name: Etapa de Build (simulada)
+      run: echo "🔧 Compilando aplicação CodeHealth..."
+
+    - name: Etapa de Testes (simulada)
+      run: |
+        echo "🧪 Executando testes simulados..."
+        echo "Teste concluído com sucesso!"
+
+    - name: Relatório final
+      run: echo "✅ Build successful!"
+
