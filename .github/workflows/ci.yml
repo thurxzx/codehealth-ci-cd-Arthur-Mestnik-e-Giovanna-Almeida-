@@ -22,3 +22,10 @@ jobs:
 
     - name: Relatório final
       run: echo "✅ Build successful!"
+    - name: Deploy simulado
+      if: success()
+      run: |
+        echo "🚀 Gerando artefato de deploy..."
+        mkdir -p staging
+        zip -r staging/codehealth.zip .
+        echo "✅ Deploy concluído para ambiente de homologação!"
